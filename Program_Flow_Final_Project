@@ -1,0 +1,29 @@
+option1 = 'Boston Terrier'
+option2 = 'Boxer'
+option3 = 'Pug'
+option4 = 'German Shepard'
+option5 = 'Chocolate Lab'
+option6 = 'French Bulldog'
+option7 = 'Exit'
+
+choice = None
+
+message = f'Please choose a dog breed that we should get (enter corresponding numeric value):\n \
+1. {option1}\n \
+2. {option2}\n \
+3. {option3}\n \
+4. {option4}\n \
+5. {option5}\n \
+6. {option6}\n \
+0. {option7}'
+
+print(message)
+
+while choice != 0:
+    choice = int(input('Enter your choice: \n'))
+    if choice in range(0, 7):
+        print(f'You chose option {choice}')
+    elif choice not in range(0, 7):
+        print(message)
+else:
+    print('loop done')
